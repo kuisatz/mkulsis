@@ -1,0 +1,131 @@
+﻿<!DOCTYPE HTML>
+<!--
+    Editorial by HTML5 UP
+    html5up.net | @ajlkn
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+<head>
+    
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+    <script src="../../js/karne/ogretmen.js"></script>
+    <link rel="stylesheet" href="../../assets/css/main_detay.css" />
+    <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+    <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+</head>
+<body onload="load()">
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Main -->
+        <div id="main">
+            <div class="inner">
+
+                <!-- Header -->
+                <header id="header">
+                    <select id="selectNumber"> </select>
+
+                </header>
+                <header class="major">
+                    <p></p>
+                </header>
+                <!-- Banner -->
+                <br /> <select id="sube"></select><br />
+                <select id="donem" onchange="secilenDonem()">
+                    <option>1.Donem</option>
+                    <option>2.donem</option>
+                </select>
+                <section id="banner"></section>
+                <section>
+                    <header class="major">
+                        <h2>Karne</h2>
+                    </header>
+                    <table id="example" class="display" cellspacing="0" width="100%">
+                        <thead>
+                            <tr>
+                                <th onclick="sortTable(0)">Ders Adı</th>
+                                <th>y1</th>
+                                <th>y2</th>
+                                <th>y3</th>
+                                <th onclick="sortTable(1)">ysp</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </section>
+
+            </div>
+        </div>
+
+      <!-- Sidebar -->
+        <div id="sidebar">
+             <script>
+                alert1x4 = localStorage.getItem("alert1x4");
+                alert1x5 = localStorage.getItem("alert1x5");
+                alert1x6 = localStorage.getItem("alert1x6");
+                alert1x7 = localStorage.getItem("alert1x7");
+                iletisim1 = localStorage.getItem("iletisim1"); 
+                iletisim2 = localStorage.getItem("iletisim2"); 
+                iletisim3 = localStorage.getItem("iletisim3"); 
+                iletisim4 = localStorage.getItem("iletisim4"); 
+            </script> 
+            <div class="inner">
+
+                <!-- Search -->
+                <section id="search" class="alt">
+                    <p style="color:#eff1f2;" >.</p>
+
+                </section>
+
+                <!-- Menu -->
+                <nav id="menu">
+                    <header class="major"> 
+                        <h2 id = "alertx7" ><script> document.getElementById("alertx7").innerHTML = alert1x7; </script></h2>
+                    </header>  
+                </nav> 
+
+                <!-- Section -->
+                <section>
+                    
+                    <header class="major" >   
+                        <h2 id = "alertx4" ><script> document.getElementById("alertx4").innerHTML = alert1x4;
+                        </script></h2>
+                         
+                    </header> 
+                        <p id = "alertx5" ><script> document.getElementById("alertx5").innerHTML = alert1x5;
+                        </script></p>
+                    <ul class="contact">
+                       
+                        <li class="fa-envelope-o"><a id = "iletisim1" href="#"><script>document.getElementById("iletisim1").innerHTML = iletisim1;</script>
+                        </a></li>
+                        <li id = "iletisim2" class="fa-phone"><script>document.getElementById("iletisim2").innerHTML = iletisim2;</script></li>
+                        <li id = "iletisim3" class="fa-home">
+                            <script>document.getElementById("iletisim3").innerHTML = iletisim3 + "<br />"  + iletisim4; </script> <br />
+                          
+                        </li>
+                    </ul>
+                </section>
+
+                <!-- Footer -->
+                <footer id="footer">
+                   <p class="copyright">&copy; <a  id = "alertx6"  href="http://www.bilsa.com.tr"><script>document.getElementById("alertx6").innerHTML = alert1x6;</script></a>.</p>
+                </footer>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="../../assets/js/jquery.min.js"></script>
+    <script src="../../assets/js/skel.min.js"></script>
+    <script src="../../assets/js/util.js"></script>
+    <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+
+    <script src="../../assets/js/main.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="scripts/jquery.min.js"></script>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <link rel="stylesheet" type="text/css" href="css/login.css">
+    <script type="text/javascript" src="js/login.js"></script>
+    <script>
+        function calc() {
+            var tchatirlaname = "";
+            var tchatirlapassword = "";
+         //   alert(localStorage.getItem("lid"));
+            if (document.getElementById('test2').checked) {
+              
+                tchatirlaname = $("#name").val();
+                tchatirlapassword = $("#password").val(); 
+                localStorage.setItem("tchatirlaname", tchatirlaname);
+                localStorage.setItem("tchatirlapassword", tchatirlapassword);
+                localStorage.setItem("lidhatirla",localStorage.getItem("lid"));
+                localStorage.removeItem("KullaniciAdi");
+                localStorage.removeItem("gelenid");
+                localStorage.removeItem("okulid");
+                $("testbutton").click();
+                
+              
+            } else {
+               // localStorage.clear();
+                localStorage.removeItem("tc");
+                localStorage.removeItem("KullaniciAdi");
+                localStorage.removeItem("gelenid");
+                localStorage.removeItem("okulid");
+                localStorage.removeItem("tchatirlaname");
+                localStorage.removeItem("tchatirlapassword");
+                localStorage.setItem("lidhatirla",647);
+                
+            }
+       
+        }
+    </script>
+
+</head>
+<body onload="load()"> 
+    <select id="selectLanguage" >  </select>
+
+    
+    <div class="app">
+  
+
+        <form action="./" method="post">
+            <script>
+            alan1x1 = localStorage.getItem("alan1x1");
+            alan1x2 = localStorage.getItem("alan1x2");
+            alan1x3 = localStorage.getItem("alan1x3");
+            alan1x4 = localStorage.getItem("alan1x4"); 
+            </script> 
+            <input class="formcontrol" id="name" name="name" type="number" min="0" max="11" onkeydown="limit(this);" onkeyup="limit(this);"  >
+            <script>
+              document.getElementById("name").placeholder = alan1x1;   
+         
+            </script>
+            <input class="formcontrol" id="password" name="password" type="password"  >
+            <script>
+              document.getElementById("password").placeholder = alan1x2;  
+            </script>
+            <input class="testbutton" type="button" id="button1" onclick="calc();"   /><br /><br />
+            <script>
+              document.getElementById("button1").value = alan1x3;
+            </script> 
+           <input type="checkbox" id="test2" name="xxx"  /><label id = "test2label">Beni Hatırla..</label> 
+            <script>
+            document.getElementById("test2label").innerHTML = alan1x4;
+            </script> 
+ 
+            <p></p>
+        </form>
+    </div>
+    <div class="bilsalogo"><img src="http://mobile.okulsis.net:8280/okulsis/image/okulsis/logo.png" /></div>
+</body>
+</html>

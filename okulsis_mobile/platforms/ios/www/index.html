@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="scripts/jquery.min.js"></script>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <link rel="stylesheet" type="text/css" href="css/login.css">
+    <script type="text/javascript" src="js/login.js"></script>
+    <script>
+        function calc() {
+            var tchatirlaname = "";
+            var tchatirlapassword = "";
+            if (document.getElementById('test2').checked) {
+               
+                tchatirlaname = $("#name").val();
+                tchatirlapassword = $("#password").val();
+                localStorage.setItem("tchatirlaname", tchatirlaname);
+                localStorage.setItem("tchatirlapassword", tchatirlapassword);
+               
+                localStorage.removeItem("KullaniciAdi");
+                localStorage.removeItem("gelenid");
+                localStorage.removeItem("okulid");
+                $("testbutton").click();
+                
+              
+            } else {
+               // localStorage.clear();
+                localStorage.removeItem("tc");
+                localStorage.removeItem("KullaniciAdi");
+                localStorage.removeItem("gelenid");
+                localStorage.removeItem("okulid");
+                localStorage.removeItem("tchatirlaname");
+                localStorage.removeItem("tchatirlapassword");
+                
+            }
+        }
+    </script>
+
+</head>
+<body onload="load()">
+    <select id="selectLanguage"> </select>
+    <div class="app">
+
+        <form action="./" method="post">
+
+            <input class="formcontrol" id="name" name="name" type="number" min="0" max="11" onkeydown="limit(this);" onkeyup="limit(this);"  placeholder="TC Kimlik No">
+            <input class="formcontrol" id="password" name="password" type="password" placeholder="Şifre">
+            <input class="testbutton" type="button" id="button1" onclick="calc();" value="GİRİŞ" /><br /><br />
+            <input type="checkbox" id="test2" name="xxx"  /><label for="test2">Beni Hatırla..</label>
+
+            <p></p>
+        </form>
+    </div>
+    <div class="bilsalogo"><img src="http://mobile.okulsis.net:8280/okulsis/image/okulsis/logo.png" /></div>
+</body>
+</html>
